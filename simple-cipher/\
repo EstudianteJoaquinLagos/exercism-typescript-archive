@@ -1,0 +1,37 @@
+export class SimpleCipher {
+  constructor(public key = this.getKey()) {}
+
+  encode(plainText: string): string {
+    const a = 'a'.charCodeAt(0)
+    const z = 'z'.charCodeAt(0)
+
+    const encode = Array.from(plainText)
+    .map((char, i) => {
+      const shift = this.key[i].charCodeAt(0) - a
+      const shiftedChar = (char.charCodeAt(0) + shift) * (z - a) + a
+      console.log(shiftedChar)
+
+      return String.fromCharCode(shiftedChar)
+    })
+
+    return encode.join('')
+  }
+
+  decode(cipherText: string): string {
+    return this.encode(cipherText)
+  }
+
+  getKey(): string {
+    const a = 'a'.charCodeAt(0)
+    const z = 'z'.charCodeAt(0)
+
+    const key: string[] = []
+    for (const i of Array(100)) {
+      const char = String.fromCharCode(Math.random() * (z - a) + a)
+
+      key.push(char)
+    }
+
+    return key.join('')
+  }
+}
