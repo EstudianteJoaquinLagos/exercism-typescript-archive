@@ -17,8 +17,8 @@ The precise number and names of the operations to be implemented will be track d
 - [x] `filter` (_given a predicate and a list, return the list of all items for which `predicate(item)` is True_);
 - [x] `length` (_given a list, return the total number of items within it_);
 - [x] `map` (_given a function and a list, return the list of the results of applying `function(item)` on all items_);
-- []`foldl` (_given a function, a list, and initial accumulator, fold (reduce) each item into the accumulator from the left_);
-- []`foldr` (_given a function, a list, and an initial accumulator, fold (reduce) each item into the accumulator from the right_);
+- [x] `foldl` (_given a function, a list, and initial accumulator, fold (reduce) each item into the accumulator from the left_);
+- [x] `foldr` (_given a function, a list, and an initial accumulator, fold (reduce) each item into the accumulator from the right_);
 - [x] `reverse` (_given a list, return a list with all the original items, but in reversed order_).
 
 Note, the ordering in which arguments are passed to the fold functions (`foldl`, `foldr`) is significant.
